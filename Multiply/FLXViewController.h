@@ -2,7 +2,7 @@
 //  FLXViewController.h
 //  Multiply
 //
-//  Created by Administrator on 3/10/14.
+//  Created by Wes Benwick on 3/10/14.
 //  Copyright (c) 2014 FileLogix. All rights reserved.
 //
 
