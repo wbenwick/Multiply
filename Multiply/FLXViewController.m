@@ -12,6 +12,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *myNumber;
 @property (strong, nonatomic) IBOutlet UILabel *myMultiplier;
 @property (strong, nonatomic) IBOutlet UILabel *myAnswer;
+@property (strong, nonatomic) IBOutlet UIButton *myCalculateButton;
 
 @end
 
@@ -29,10 +30,26 @@
     // Dispose of any resources that can be recreated.
 }
 
+// Listed for touch to happen, dismiss keyboard
+
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [self.myNumber resignFirstResponder];
-    NSLog(@"touches ended");
+}
+
+
+- (IBAction)onCalculateButtonPressed:(id)sender {
+//    NSNumber *myNumberAsInt = [NSNumber numberWithInt:[self.myNumber.text intValue]];
+//    NSNumber *myMultiplierAsInt = [NSNumber numberWithInt:[self.myMultiplier.text intValue]];
+
+    int myNumberAsInt = [self.myNumber.text intValue];
+    int myMultiplierAsInt = [self.myMultiplier.text intValue];
+
+    int answer = myNumberAsInt * myMultiplierAsInt;
+    
+    self.myAnswer.text=[NSString stringWithFormat:@"%d", answer];
+    
+    
 }
 
 @end

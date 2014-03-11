@@ -20,7 +20,7 @@
                                 <rect key="frame" x="20" y="205" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="*" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DeY-Ee-KGc">
                                 <rect key="frame" x="125" y="209" width="7" height="21"/>
@@ -47,19 +47,26 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SAU-Tz-otZ">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SAU-Tz-otZ">
                                 <rect key="frame" x="56" y="380" width="219" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.11095455880000001" green="0.27354298360000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="29"/>
                                 <color key="tintColor" red="1" green="0.96985754015144066" blue="0.99576869464186812" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Calculate"/>
+                                <connections>
+                                    <action selector="onCalculateButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="17m-Pw-Vl1"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="j4h-Fi-RlS" firstAttribute="top" secondItem="SAU-Tz-otZ" secondAttribute="bottom" constant="146" id="Y2X-Y4-xrb"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="myAnswer" destination="HKY-xu-JQ6" id="dLr-uA-v0y"/>
+                        <outlet property="myCalculateButton" destination="SAU-Tz-otZ" id="mya-m3-EaX"/>
                         <outlet property="myMultiplier" destination="585-Wi-pNd" id="dtf-9X-Ppt"/>
                         <outlet property="myNumber" destination="0Y9-UX-x0G" id="3zl-nF-ERW"/>
                     </connections>
